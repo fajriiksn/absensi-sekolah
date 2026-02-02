@@ -1,0 +1,148 @@
+/* 1. Import Font Utama: Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* 2. Import Font Digital: VT323 (Untuk LED) */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+:root {
+  --mts-dark: #064e3b; /* Hijau Tua Gelap (Sidebar) */
+  --mts-main: #10b981; /* Hijau Utama (Tombol/Aksen) */
+  --mts-light: #d1fae5; /* Hijau Muda (Background) */
+  --text-dark: #1f2937;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f3f4f6; /* Abu-abu sangat muda agar konten menonjol */
+  color: var(--text-dark);
+}
+
+/* --- SIDEBAR MODERN CLEAN STYLE --- */
+
+/* 1. Container Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Gradasi Hijau MTs yang lebih elegan */
+  background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+  color: white;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* 2. Style Link Menu (Default: Putih Bersih) */
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important; /* Putih agak transparan dikit */
+  margin-bottom: 8px;
+  padding: 12px 20px;
+  border-radius: 8px; /* Sudut membulat */
+  transition: all 0.3s ease;
+  border: none !important;
+  font-weight: 400;
+  background: transparent !important;
+}
+
+/* 3. Efek Hover */
+.sidebar .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ) !important; /* Efek kaca transparan */
+  padding-left: 25px; /* Efek geser kanan sedikit */
+}
+
+/* 4. State ACTIVE (Menu yang sedang dipilih: BIRU) */
+.sidebar .nav-link.active {
+  background-color: #3b82f6 !important; /* Biru Modern */
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4); /* Bayangan biru halus */
+}
+
+/* 5. Submenu (Dropdown Laporan) */
+.sidebar .collapse .nav-link {
+  padding-left: 40px;
+  font-size: 0.9rem;
+}
+
+/* 6. Tombol Logout Khusus (MERAH) */
+.nav-link.btn-logout {
+  background-color: #dc2626 !important; /* Merah */
+  color: white !important;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
+.nav-link.btn-logout:hover {
+  background-color: #b91c1c !important;
+}
+
+/* Header Brand */
+.brand-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 250px; /* Sesuai lebar sidebar */
+  padding: 30px;
+}
+
+/* Card Modern */
+.card-custom {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.card-custom:hover {
+  transform: translateY(-5px);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(45deg, #10b981, #059669);
+  color: white;
+}
+
+/* --- STYLE UNTUK LED RUNNING TEXT (BARU) --- */
+
+.led-wrapper {
+  background: #000; /* Latar Hitam pekat */
+  border: 4px solid #333; /* Bingkai abu tua */
+  border-radius: 10px;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  height: 60px; /* Tinggi kotak LED */
+}
+
+.led-text {
+  font-family: "VT323", monospace; /* Font Kotak-kotak Digital */
+  font-size: 1.8rem;
+  color: #00ff00; /* Warna Hijau LED menyala */
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00; /* Efek Glowing/Bercahaya */
+  white-space: nowrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 40px;
+  text-transform: uppercase;
+
+ 
